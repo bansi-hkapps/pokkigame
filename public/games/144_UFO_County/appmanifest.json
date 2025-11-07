@@ -1,0 +1,10 @@
+{
+	"name": "UFO County",
+	"short_name": "UFO County",
+	"description": "Are you ready to space adventure in the role of intergalactic pirate and mercenary Ueff. Fly through the armadas of alien defense ships, evade the fire and take away as much valuable resources from their pathetic planet as possible!",
+	"start_url": "index.html",
+	"display": "fullscreen",
+	"orientation": "landscape",
+	"background_color": "#ffffff"
+	
+}
