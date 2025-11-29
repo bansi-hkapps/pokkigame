@@ -1,31 +1,32 @@
 @extends('layouts.frontend')
 
 @section('content')
-    <div class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
+    <div class="container my-4">
+        <div class=" justify-content-center">
 
-                <!-- Blog Title -->
-                <h1 class="fw-bold text-center mb-3">{{ $blog->title }}</h1>
-                <p class="text-muted text-center mb-4">
+            {{-- <p class="text-muted text-center mb-4">
                     Published on {{ $blog->created_at->format('F d, Y') }}
-                </p>
+                </p> --}}
 
-                <!-- Blog Image -->
-                @if ($blog->image)
-                    <div class="text-center mb-4">
-                        <img src="{{ asset($blog->image) }}" alt="{{ $blog->title }}" class="img-fluid rounded-4 shadow-sm"
-                            style="max-height: 450px; object-fit: cover;">
-                    </div>
-                @endif
-
-                <!-- Blog Description (Rich Text / HTML Supported) -->
-                <div class="blog-content-box bg-white shadow-sm rounded-4 p-4 fs-5 lh-lg">
-                    {!! $blog->description !!}
+            <!-- Blog Image -->
+            @if ($blog->image)
+                <div class="text-center">
+                    <img src="{{ asset($blog->image) }}" alt="{{ $blog->title }}" class="img-fluid">
                 </div>
+            @endif
+            
+            <!-- Blog Title -->
+            <h1 class="fw-bold mt-4 text-start ">{{ $blog->title }}</h1>
 
-
+            <!-- Blog Description (Rich Text / HTML Supported) -->
+            <div class="blog-content-box fs-5 lh-lg mt-4 ">
+                {!! $blog->description !!}
             </div>
+
+            {{-- Blog Section --}}
+            <x-blog-section :blogs="$relatedBlogs" />
+
+
         </div>
     </div>
 @endsection

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\GameController;
 use App\Http\Controllers\FrontGameController;
-
+use App\Http\Controllers\SubGameController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +17,7 @@ use App\Http\Controllers\FrontGameController;
 |
 */
 
-
+// fronted route
 Route::get('/', [FrontGameController::class, 'index'])->name('home');
 Route::get('/games/{slug}', [FrontGameController::class, 'show'])->name('games.show');
 Route::get('/games/{slug}/play', [FrontGameController::class, 'play'])->name('games.play');
@@ -42,9 +42,13 @@ Route::get('/privacy-policy', function () {
     return view('pages.privacy-policy');
 });
 
+// sub domain route
+Route::get('/game-clone', [SubGameController::class, 'index'])->name('game-clone');
+Route::get('/category/{slug}', [SubGameController::class, 'category']);
+Route::post('/earn-coins', [SubGameController::class, 'earnCoins'])->name('earn.coins');
+Route::post('/play-game/{id}', [SubGameController::class, 'playGame'])->name('play.game');
 
-
-
+// admin route
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/', function () {
         return view('admin.dashboard');

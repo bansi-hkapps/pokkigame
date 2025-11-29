@@ -13,15 +13,15 @@ class FrontGameController extends Controller
     {
         $games = Game::orderBy('created_at', 'desc')->get();
         $blogs = Blog::orderBy('created_at', 'desc')->get();
-        return view('pages.welcome', compact('games','blogs'));
+        return view('pages.welcome', compact('games', 'blogs'));
     }
 
     // Show single game page
     public function show($slug)
     {
         $game = Game::where('slug', $slug)->firstOrFail();
-        $games = Game::orderBy('created_at', 'desc')->get();
-        return view('pages.games.show', compact('game','games'));
+        $games = Game::where('id', '!=', $game->id)->orderBy('created_at', 'desc')->get();
+        return view('pages.games.show', compact('game', 'games'));
     }
 
     //... Play page (loads game folder)
@@ -38,16 +38,16 @@ class FrontGameController extends Controller
         return redirect()->away($gameUrl);
     }
 
-     public function showBlog($title)
+    public function showBlog($title)
     {
         // Find the blog by slug or title
         $blog = Blog::where('title', $title)->firstOrFail();
 
         // Optional: Get related blogs
         $relatedBlogs = Blog::where('id', '!=', $blog->id)
-                            ->latest()
-                            ->take(3)
-                            ->get();
+            ->latest()
+            ->take(3)
+            ->get();
 
         // Return to the view
         return view('pages.blogs.show', compact('blog', 'relatedBlogs'));

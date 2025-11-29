@@ -1,54 +1,69 @@
-<hr class="border-gray mt-5">
-<footer class="pt-5 pb-3">
-    <div class="container">
+<footer class="container my-5">
+
+    <div class="footer-section">
+
         <div class="row gy-4">
-            <div class="col-md-3 col-sm-6">
-                <h5 class="fw-bold mb-3">Resources</h5>
+            <div class="col-md-4 col-sm-6">
+                <h5 class="footer-title">Resources</h5>
                 <ul class="list-unstyled footer-links">
-                    <li><a href="{{ url('/') }}" class="text-dark text-decoration-none">HOME</a></li>
-                    <li><a href="{{ url('/aboutus') }}" class="text-dark text-decoration-none">ABOUT US</a></li>
-                    <li><a href="{{ url('/developer') }}" class="text-dark text-decoration-none">DEVELOPER</a></li>
-                    <li><a href="{{ url('/affiliates') }}" class="text-dark text-decoration-none">AFFILIATES</a></li>
-                    <li><a href="{{ url('/privacy-policy') }}" class="text-dark text-decoration-none">PRIVACY POLICY</a></li>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="/aboutus">ABOUT US</a></li>
+                    <li><a href="/developer">DEVELOPERS</a></li>
+                    <li><a href="/affiliates">AFFILIATES</a></li>
+                    <li><a href="/privacy-policy">PRIVACY POLICY</a></li>
                 </ul>
             </div>
-            <div class="col-md-3 col-sm-6">
-                <h5 class="fw-bold mb-3">Recent Games</h5>
+
+            <div class="col-md-4 col-sm-6">
+                <h5 class="footer-title">Recent Games</h5>
                 <ul class="list-unstyled footer-links">
-                    <li><a href="#" class="text-dark text-decoration-none">STRIKE BOWLING</a></li>
-                    <li><a href="#" class="text-dark text-decoration-none">KNIFE HIT EMOJI</a></li>
-                    <li><a href="#" class="text-dark text-decoration-none">BLOCK BREAKER</a></li>
-                    <li><a href="#" class="text-dark text-decoration-none">SPEED BOAT</a></li>
-                    <li><a href="#" class="text-dark text-decoration-none">GOAL MASTER</a></li>
+                    <li><a href="#">STRIKE BOWLING</a></li>
+                    <li><a href="#">KNIFE HIT EMOJI</a></li>
+                    <li><a href="#">BLOCK BREAKER</a></li>
+                    <li><a href="#">SPEED BOAT</a></li>
+                    <li><a href="#">GOAL MASTER</a></li>
                 </ul>
             </div>
-            <div class="col-md-3 col-sm-6">
-                <h5 class="fw-bold mb-3">Top Games</h5>
+
+            <div class="col-md-4 col-sm-6">
+                <h5 class="footer-title">Top Games</h5>
                 <ul class="list-unstyled footer-links">
-                    <li><a href="#" class="text-dark text-decoration-none">LUDO ROYAL</a></li>
-                    <li><a href="#" class="text-dark text-decoration-none">LOVE'S QUEST</a></li>
-                    <li><a href="#" class="text-dark text-decoration-none">PET MERGE</a></li>
-                    <li><a href="#" class="text-dark text-decoration-none">BASKETBALL DUNK</a></li>
-                    <li><a href="#" class="text-dark text-decoration-none">EMOJI BINGO</a></li>
+                    <li><a href="#">LUDO ROYAL</a></li>
+                    <li><a href="#">LOVE'S QUEST</a></li>
+                    <li><a href="#">PET MERGE</a></li>
+                    <li><a href="#">BASKETBALL DUNK</a></li>
+                    <li><a href="#">EMOJI BINGO</a></li>
                 </ul>
             </div>
-            <div class="col-md-3 col-sm-6">
-                <button class="btn btn-primary btn-sm rounded-pill px-4 py-2">
-                    CONTACT US
-                </button>
+
+
+        </div>
+
+        <!-- Logo and bottom -->
+        <div class="row mt-4 align-items-center">
+
+            <div class="col-md-6 col-sm-6 d-flex justify-content-start">
+                <img src="{{ asset('images/logo.webp') }}" class="footer-logo" alt="Logo">
+            </div>
+
+            <div class="col-md-6 col-sm-6 d-flex justify-content-end">
+                <button class="footer-btn">CONTACT US</button>
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom d-flex justify-content-between align-items-center">
+            <div class="footer-social d-flex gap-3">
+                <i class="bi bi-facebook"></i>
+
+                <i class="bi bi-instagram"></i>
+            </div>
+
+            <div>
+                Copyright © {{ date('Y') }} TheStudyIQ.com
             </div>
         </div>
+
     </div>
 </footer>
-<hr class="border-gray ">
-<div class="container pb-2">
-    <div class="d-flex justify-content-between">
-        <div class="d-flex gap-3">
-            <a href="#" class="text-dark fs-5"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="text-dark fs-5"><i class="bi bi-instagram"></i></a>
-        </div>
-        <div>
-            Copyright © {{ date('Y') }} Pokiigame.com
-        </div>
-    </div>
-</div>

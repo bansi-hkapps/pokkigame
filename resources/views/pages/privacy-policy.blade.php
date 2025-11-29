@@ -1,12 +1,12 @@
 @extends('layouts.frontend')
 
 @section('content')
-    <div class="container mt-5">
+    <div class="container mt-5 pages-text">
         <div>
-            <h2 class="text-primary fw-bold">Privacy Policy for Pokiigame.com</h2>
+            <h2 class="fw-bold color-purple">Privacy Policy for Pokiigame.com</h2>
         </div>
         <div class="mt-5">
-            <h2 class="text-primary fw-bold">1. Introduction</h2>
+            <h2 class="color-purple fw-bold">1. Introduction</h2>
             <div class="mt-3">
                 <div>
                     As stated in this Privacy Statement, Pokii Game is principally in charge of gathering and utilizing your
@@ -16,7 +16,7 @@
             </div>
         </div>
         <div class="mt-5">
-            <h2 class="text-primary fw-bold">2. Automatic Data Logging</h2>
+            <h2 class="color-purple fw-bold">2. Automatic Data Logging</h2>
             <div class="mt-3">
                 <div>
                     We obtain and utilize your IP address to administer our website, troubleshoot server problems, and
@@ -27,7 +27,7 @@
             </div>
         </div>
         <div class="mt-5">
-            <h2 class="text-primary fw-bold">3. Data Collection</h2>
+            <h2 class="color-purple fw-bold">3. Data Collection</h2>
             <div class="mt-3">
                 <div>
                     We don't get any user data or information from users.
@@ -35,7 +35,7 @@
             </div>
         </div>
         <div class="mt-5">
-            <h2 class="text-primary fw-bold">4. Use of Data</h2>
+            <h2 class="color-purple fw-bold">4. Use of Data</h2>
             <div class="mt-3">
                 <div>
                     Our purposes for collecting and using your data are as follows:
@@ -52,7 +52,7 @@
             </div>
         </div>
         <div class="mt-5">
-            <h2 class="text-primary fw-bold">5. Third Party Sharing</h2>
+            <h2 class="color-purple fw-bold">5. Third Party Sharing</h2>
             <div class="mt-3">
                 <div>
                     We might use third-party payment processors to make transactions and payments on our website easier,
@@ -62,7 +62,7 @@
             </div>
         </div>
         <div class="mt-5">
-            <h2 class="text-primary fw-bold">6. Data Retention</h2>
+            <h2 class="color-purple fw-bold">6. Data Retention</h2>
             <div class="mt-3">
                 <div>
                     We will retain your information on file for as long as it takes to fulfill your request. If you would
@@ -73,7 +73,7 @@
             </div>
         </div>
         <div class="mt-5">
-            <h2 class="text-primary fw-bold">7. Age Restricted Activities</h2>
+            <h2 class="color-purple fw-bold">7. Age Restricted Activities</h2>
             <div class="mt-3">
                 <div>
                     Most of the features and activities on Pokiigame.com are suitable for players of all ages. A few of them
@@ -89,7 +89,7 @@
             </div>
         </div>
         <div class="mt-5">
-            <h2 class="text-primary fw-bold">8. Protective Measures</h2>
+            <h2 class="color-purple fw-bold">8. Protective Measures</h2>
             <div class="mt-3">
                 <div>
                     We have implemented the necessary security measures to prevent unauthorized individuals from accessing,
