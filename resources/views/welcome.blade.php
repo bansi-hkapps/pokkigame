@@ -10,7 +10,7 @@
 
 
     <!-- Search Bar -->
-    <form method="GET" action="{{ route('game-clone') }}">
+    <form method="GET" action="{{ route('sub.home') }}">
         <div class="input-group mb-3">
             <input type="text" name="search" value="{{ request('search') }}" class="form-control shadow-sm ps-4 pe-5 "
                 placeholder="Search games...">

@@ -43,13 +43,17 @@ Route::get('/privacy-policy', function () {
 });
 
 // sub domain route
-Route::get('/game-clone', [SubGameController::class, 'index'])->name('game-clone');
-Route::get('/category/{slug}', [SubGameController::class, 'category']);
-Route::post('/earn-coins', [SubGameController::class, 'earnCoins'])->name('earn.coins');
-Route::post('/play-game/{id}', [SubGameController::class, 'playGame'])->name('play.game');
+Route::domain('2002.pokkigame.com')->group(function () {
+    Route::get('/', [SubGameController::class, 'index'])->name('sub.home');
+    Route::get('/category/{slug}', [SubGameController::class, 'category']);
+    Route::post('/earn-coins', [SubGameController::class, 'earnCoins'])->name('earn.coins');
+    Route::post('/play-game/{id}', [SubGameController::class, 'playGame'])->name('play.game');
+});
 
-// admin route
-Route::prefix('admin')->name('admin.')->group(function () {
+
+// Admin Routes (Protected)
+Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {
+
     Route::get('/', function () {
         return view('admin.dashboard');
     })->name('dashboard');
@@ -57,3 +61,9 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::resource('blog', BlogController::class);
     Route::resource('games', GameController::class);
 });
+
+// Auth System Routes
+Auth::routes();
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
